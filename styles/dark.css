@@ -1,12 +1,36 @@
+
 /*
   Специально для тёмной темы при наличии класса,
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+:root.theme-dark {
+  --akcent-color: #FF0070;
+  --title-color: #DB00FF;
+  --background-color: #000028;
+  --font-family: IBM Plex Mono, monospace;
+  --normal_font-style: normal;
+  --main-text-size: 18px;
+  --main-text-color: #F1B2CE;
+  --background-image: url(../images/cover-image-dark.png);
+  --main-text-font-weight: 400;
+  --title-text-font-weight: 700;
+}
 
 .page.theme_dark {
+  margin: 0;
+  padding: 20px;
+  background-color: var(--background-color);
+  background-image: var(--background-image);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
 }
+
+
+

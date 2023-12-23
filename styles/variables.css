@@ -2,3 +2,18 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+:root{
+  --akcent-color: #FF0070;
+  --title-color: #DB00FF;
+  --background-color: #000028;
+  --title-decor-color: #000028;
+  --font-family: IBM Plex Mono, monospace;
+  --normal_font-style: normal;
+  --main-text-size: 18px;
+  --main-text-color: #F1B2CE;
+  --akcent-text-color: #FF0070;
+  --background-image: url(../images/cover-image-dark.png);
+  --main-text-font-weight: 400;
+  --title-text-font-weight: 700;
+  --decor-rec-visibility: inherit;
+}
