@@ -2,18 +2,21 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
-:root{
-  --akcent-color: #FF0070;
-  --title-color: #DB00FF;
+:root {
+  --akcent-color: #ff0070;
+  --title-color: #db00ff;
   --background-color: #000028;
+  --frame-hover-color: rgba(255, 0, 112, 0.4);
+  --frame-hover: 1px solid var(--frame-hover-color);
   --title-decor-color: #000028;
   --font-family: IBM Plex Mono, monospace;
   --normal_font-style: normal;
   --main-text-size: 18px;
-  --main-text-color: #F1B2CE;
-  --akcent-text-color: #FF0070;
+  --main-text-color: #f1b2ce;
+  --akcent-text-color: #ff0070;
   --background-image: url(../images/cover-image-dark.png);
   --main-text-font-weight: 400;
   --title-text-font-weight: 700;
   --decor-rec-visibility: inherit;
+  --text-shadow: #ff0070;
 }
