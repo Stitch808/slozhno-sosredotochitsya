@@ -2,7 +2,6 @@
 
 .page {
   margin: 0;
-  padding: 20px;
   background-color: var(--background-color);
   background-image: var(--background-image);
   background-position: center;
@@ -14,10 +13,11 @@
 }
 
 .header {
+  padding: 20px;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   height: 95vh;
-  margin-bottom: 58px;
+  margin-bottom: 38px;
 }
 
 .decorated-zone {
@@ -29,8 +29,8 @@
   position: absolute;
   width: 25px;
   height: 25px;
-  bottom: 0;
-  left: 0;
+  bottom: 20px;
+  left: 20px;
   border-bottom: 1px solid var(--akcent-text-color);
   border-left: 1px solid var(--akcent-text-color);
 }
@@ -40,8 +40,8 @@
   position: absolute;
   width: 25px;
   height: 25px;
-  top: 0;
-  right: 0;
+  top: 20px;
+  right: 20px;
   border-top: 1px solid var(--akcent-text-color);
   border-right: 1px solid var(--akcent-text-color);
 }
@@ -55,7 +55,8 @@
   font-style: var(--normal_font-style);
   font-weight: var(--main-text-font-weight);
   line-height: 25px;
-  inset-inline-end: 22px;
+  inset-block-start: 20px;
+  inset-inline-end: 42px;
   visibility: var(--decor-rec-visibility);
 }
 
@@ -68,8 +69,8 @@
   content: "";
   position: absolute;
   background-image: url(../images/Ellipse4.png);
-  width: 17px;
-  height: 17px;
+  width: 18px;
+  height: 18px;
   fill: var(--akcent-color);
   filter: drop-shadow(0px 0px 4px var(--akcent-color));
   background-position: center;
@@ -188,6 +189,7 @@
 }
 
 .main {
+  padding: 0 20px;
   display: grid;
   gap: 80px;
 }
@@ -312,9 +314,9 @@
 }
 
 .footer {
-  margin-block-start: 80px;
+  margin-block-start: 60px;
   display: flex;
-  height: 95vh;
+  height: 100vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -332,7 +334,8 @@
 
 @media (min-width: 376px) and (max-width: 768px) {
   .header {
-    margin-bottom: 71px;
+    padding-block-end: 21px;
+    margin-block-end: 49px;
   }
 
   .header__theme-menu {
@@ -353,7 +356,7 @@
   }
 
   .decorated-zone::after {
-    inset-block-end: -13px;
+    inset-block-end: 9px;
   }
 
   .header__title {
@@ -367,6 +370,7 @@
   }
 
   .article__first-section {
+    max-width: 472px;
     inset-inline-start: 13px;
   }
 
@@ -382,19 +386,29 @@
   .section-how {
     gap: 19px;
   }
+
+  .footer {
+    height: 99vh;
+  }
+
   .footer__title {
-    margin-block-start: 112px;
+    margin-block-start: 111px;
   }
 }
 
 @media (max-width: 376px) {
   .page {
     max-width: 375px;
-    padding: 10px;
   }
 
   .header {
-    margin-bottom: 42px;
+    padding: 10px;
+    margin-bottom: 22px;
+  }
+
+  .header_rec {
+    inset-block-start: 10px;
+    inset-inline-end: 32px;
   }
 
   .header__theme-menu {
@@ -414,8 +428,15 @@
     padding: 0;
   }
 
+  .decorated-zone::before {
+    top: 10px;
+    right: 10px;
+  }
+
   .decorated-zone::after {
-    inset-block-end: -13px;
+    bottom: 10px;
+    left: 10px;
+    inset-block-end: -3px;
   }
 
   .header__title {
@@ -433,6 +454,7 @@
   }
 
   .main {
+    padding: 10px;
     gap: 50px;
   }
 
@@ -473,16 +495,14 @@
   }
 
   .footer {
-    margin-block-start: 41px;
+    height: 95vh;
+    padding: 10px;
+    margin-block-start: 21px;
   }
 
   .footer__title {
     position: relative;
     inset-block-start: 8px;
     font-size: 116px;
-  }
-
-  .decorated-zone::after {
-    inset-block-end: -11px;
   }
 }
