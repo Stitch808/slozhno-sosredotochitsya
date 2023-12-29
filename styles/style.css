@@ -410,16 +410,12 @@
     gap: 19px;
   }
 
-  .footer {
-    height: 99vh;
-  }
-
   .footer__title {
-    margin-block-start: 111px;
+    margin-block-start: 100px;
   }
 
   .footer-decorated-zone::after {
-    bottom: 12px;
+    bottom: 22px;
   }
 }
 
