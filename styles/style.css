@@ -16,7 +16,7 @@
   padding: 20px;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
-  height: 100vh;
+  min-block-size: 768px;
 }
 
 .decorated-zone {
@@ -316,9 +316,9 @@
 }
 
 .footer {
+  min-block-size: 768px;
   margin-block-start: 60px;
   display: flex;
-  height: 100vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -362,6 +362,7 @@
 
 @media (min-width: 376px) and (max-width: 768px) {
   .header {
+    min-block-size: 1024px;
     padding-block-end: 20px;
   }
 
@@ -410,6 +411,10 @@
     gap: 19px;
   }
 
+  .footer {
+    min-block-size: 1024px;
+  }
+
   .footer__title {
     margin-block-start: 100px;
   }
@@ -421,6 +426,7 @@
 
 @media (max-width: 376px) {
   .header {
+    min-block-size: 668px;
     padding: 10px;
   }
 
@@ -513,6 +519,7 @@
   }
 
   .footer {
+    min-block-size: 668px;
     padding: 10px;
     margin-block-start: 19px;
   }
