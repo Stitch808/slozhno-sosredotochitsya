@@ -3,19 +3,7 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-:root.theme-dark {
-  --akcent-color: #ff0070;
-  --akcent-text-color: #ff0070;
-  --title-color: #db00ff;
-  --background-color: #000028;
-  --font-family: IBM Plex Mono, monospace;
-  --normal_font-style: normal;
-  --main-text-size: 18px;
-  --main-text-color: #f1b2ce;
-  --background-image: url(../images/cover-image-dark.png);
-  --main-text-font-weight: 400;
-  --title-text-font-weight: 700;
-}
+
 
 .page.theme_dark {
   --akcent-color: #ff0070;

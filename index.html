@@ -18,9 +18,7 @@
   </head>
   <body class="page">
     <header class="header decorated-zone">
-      <div class="header_rec" aria-hidden="true">
-        <span class="header__decor-rec" aria-hidden="true">rec<span class="header__decor-lump"></span></span>
-      </div>
+      <span class="header__decor-rec" aria-hidden="true">rec</span>
       <nav class="header__theme-menu">
         <ul class="header__theme-menu-list">
           <li class="header__theme-menu-item">
@@ -48,19 +46,22 @@
         
       </nav>
 
-      <h1 class="header__title">no focus</h1>
+      <h1 class="header__title title">no focus</h1>
 
-      <p class="header__text-block title-decor">
-        Что делать, когда не можешь делать ничего<br>
-        Или почему нам так сложно сконцентрироваться, особенно когда очень надо
-      </p>
+      <div class="header__text-block">
+        <p class="title-decor">
+          Что делать, когда не можешь делать ничего<br>
+          Или почему нам так сложно сконцентрироваться, особенно когда очень надо
+        </p>
+      </div>
+    
 
     </header>
 
     <main class="main">
-      <section class="section-why">
+      <section class="section section__why">
         <h2 class="main__question-text main__question-why-text">Почему сосредоточиться так сложно</h2>
-        <article class="article__first-section">
+        <article class="article__why-section">
           <h3 class="title-decor title-decor-why">Многозадачность</h3>
           <p class="main__text">Особенно сложно сосредоточиться, когда задач много и все они — важные. 
             Где же легендарная многозадачность, когда она так нужна вам (и всем нанимающим менеджерам этого мира)? 
@@ -78,9 +79,9 @@
         </article>
       </section>
 
-      <section class="section-what">
+      <section class="section__what">
         <h2 class="main__question-text question-text-what">Что снижает концентрацию внимания?</h2>
-        <article class="article__second-section">
+        <article class="article__what-section">
           <div class="container-content">
             <h3 class="title-decor">Многозадачность</h3>
             <p class="main__text">Как концентрация может снижаться из-за… концентрации? Любая стрессовая ситуация 
@@ -105,10 +106,10 @@
         </article>
       </section>
 
-      <section class="section-how">
+      <section class="section section__how">
         <h2 class="main__question-text">Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх секунд)</h2>
-        <article class="article__third-section">
-          <h3 class="title-decor title-decor-five">5 простых (на самом деле не очень) советов</h3>
+        <article class="article__how-section">
+          <h3 class="title-decor title-decor-how">5 простых (на самом деле не очень) советов</h3>
 
           <div class="container-content">
             <h3 class="title-decor main__new-color-text">Представьте небо и облака</h3>
@@ -141,8 +142,8 @@
           </article>
       </section>
 
-      <section class="section-picture">
-        <h3 class="title-decor title-decor-five">А можно в картинках?</h3>
+      <section class="section__picture">
+        <h2 class="title-decor title-decor-picture">А можно в картинках?</h2>
         <article class="article__picture-section">
           <img class="card__img" src="./images/sunset.png" alt="Морской закат с птичками" loading="lazy">
           <img class="card__img" src="./images/ice-cream.png" alt="Живые мороженки в виде котят с улыбающейся миской" loading="lazy">
@@ -154,7 +155,7 @@
     </main>
 
     <footer class="footer footer-decorated-zone">
-      <h2 class="footer__title">focus</h2>
+      <h2 class="footer__title title">focus</h2>
     </footer>
 
     <script src="./scripts/script.js"></script>

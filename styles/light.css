@@ -3,25 +3,7 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-:root.theme-light {
-  --akcent-color: #ff8dcb;
-  --title-color: #ffc2e6;
-  --background-color: #fff1f7;
-  --frame-hover-color: rgba(50, 49, 45, 0.4);
-  --frame-hover: 1px solid var(--frame-hover-color);
-  --title-decor-color: #353430;
-  --font-family: IBM Plex Mono, monospace;
-  --normal_font-style: normal;
-  --main-text-size: 18px;
-  --main-text-color: #353430;
-  --akcent-text-color: #353430;
-  --background-image: url(../images/cover-image-light.png);
-  --main-text-font-weight: 400;
-  --title-text-font-weight: 700;
-  --decor-rec-visibility: hidden;
-  --text-shadow: #ff8dcb;
-  /* Переменные светлой темы */
-}
+
 
 .page.theme_light {
   --akcent-color: #ff8dcb;

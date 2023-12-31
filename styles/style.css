@@ -1,7 +1,6 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  margin: 0;
   background-color: var(--background-color);
   background-image: var(--background-image);
   background-position: center;
@@ -46,7 +45,7 @@
   border-right: 1px solid var(--akcent-text-color);
 }
 
-.header_rec {
+.header__decor-rec {
   position: absolute;
   text-transform: uppercase;
   color: var(--akcent-text-color);
@@ -56,35 +55,29 @@
   font-weight: var(--main-text-font-weight);
   line-height: 25px;
   inset-block-start: 20px;
-  inset-inline-end: 42px;
+  inset-inline-end: 49px;
   visibility: var(--decor-rec-visibility);
 }
 
-.header__decor-rec {
-  display: flex;
-  gap: 7px;
-}
-
-.header__decor-lump::before {
+.header__decor-rec::before {
   content: "";
-  position: absolute;
-  background-image: url(../images/Ellipse4.png);
-  width: 18px;
-  height: 18px;
-  fill: var(--akcent-color);
+  z-index: 2;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--akcent-text-color);
   filter: drop-shadow(0px 0px 4px var(--akcent-color));
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  inset-block-start: 4px;
+  position: absolute;
+  inset-block-end: 7px;
+  inset-inline-start: 42px;
 }
 
 .header__theme-menu-list {
   position: relative;
-  margin: 0;
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(3, 70px);
+  display: flex;
+  flex-direction: row;
+  gap: 11px;
+  align-items: center;
   justify-content: center;
 }
 
@@ -99,16 +92,8 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
-  height: 25px;
-  padding: 0 13px;
+  padding: 4px 13px;
   text-transform: lowercase;
-}
-
-.header__theme-menu-item {
-  display: inline-flex;
-  height: 26px;
-  padding: 0px 13px;
-  justify-content: center;
 }
 
 .header__theme-menu-button_active {
@@ -122,7 +107,7 @@
 
 .header__theme-menu-button:focus-visible {
   text-decoration: underline;
-  color: var(--akcent-text-color);
+  text-decoration-color: var(--akcent-text-color);
   text-underline-offset: 5px;
 }
 
@@ -130,11 +115,7 @@
   outline: none;
 }
 
-.header__title {
-  margin: 0;
-  position: relative;
-  inset-block-start: 59px;
-  inset-inline-end: 20px;
+.title {
   color: var(--title-color);
   text-shadow: 4px 4px 0px var(--akcent-color);
   font-family: var(--font-family);
@@ -142,6 +123,23 @@
   font-style: var(--normal_font-style);
   font-weight: var(--title-text-font-weight);
   line-height: 82.5%;
+}
+
+.header__title {
+  margin: 0;
+  position: relative;
+  inset-block-start: 59px;
+  inset-inline-end: 20px;
+}
+
+.header__text-block {
+  display: grid;
+  grid-row: 3;
+  font-weight: 700;
+  line-height: 130%;
+  margin: auto;
+  margin-block-start: 38px;
+  margin-inline-start: 493px;
 }
 
 .title-decor {
@@ -156,38 +154,6 @@
   line-height: 23.4px;
   background: var(--akcent-color);
   justify-self: end;
-}
-
-.header__text-block {
-  position: relative;
-  max-inline-size: 491px;
-  max-block-size: 70px;
-  inset-block-start: 38px;
-}
-
-.header__decorated-lump::before {
-  content: "rec";
-  position: absolute;
-  text-transform: uppercase;
-  color: var(--akcent-text-color);
-  text-align: center;
-  font-family: var(--font-family);
-  font-size: var(--main-text-size);
-  font-style: var(--normal_font-style);
-  font-weight: var(--main-text-font-weight);
-  line-height: 25px;
-}
-
-.header__decorated-lump {
-  position: absolute;
-  background-image: url(../images/Ellipse4.png);
-  width: 21px;
-  height: 21px;
-  fill: var(--akcent-color);
-  filter: drop-shadow(0px 0px 4px var(--akcent-color));
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .main {
@@ -226,20 +192,19 @@
 }
 
 .link__text:focus-visible {
-  border: 1px solid var(--main-text-color);
+  outline: 1px solid var(--main-text-color);
 }
 
 .link__text:focus {
   outline: none;
 }
 
-.section-why {
+.section {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  overflow: hidden;
 }
 
-.article__first-section {
+.article__why-section {
   position: relative;
   inset-inline-start: 7px;
 }
@@ -253,27 +218,25 @@
   max-inline-size: 315px;
 }
 
-.article__second-section {
+.article__what-section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
-.section-how {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+.section__how {
   gap: 11px;
 }
 
-.title-decor-five {
-  margin: 0;
+.title-decor-how {
+  margin-top: 0;
 }
 
 .main__new-color-text {
   font-weight: var(--main-text-font-weight);
 }
 
-.article__third-section {
+.article__how-section {
   position: relative;
   inset-block-end: 1px;
 }
@@ -286,6 +249,10 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
   gap: 20px;
+}
+
+.title-decor-picture {
+  margin: 0;
 }
 
 .card__img {
@@ -323,16 +290,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.footer__title {
-  color: var(--title-color);
-  text-shadow: 2px 2px 0px var(--akcent-color);
-  font-family: var(--font-family);
-  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  font-style: var(--normal_font-style);
-  font-weight: var(--title-text-font-weight);
-  line-height: 82.5%; /* 129.525px */
 }
 
 .footer-decorated-zone {
@@ -374,10 +331,10 @@
   }
 
   .header__theme-menu-list {
-    display: flex;
     flex-direction: column;
-    inset-inline-start: 0;
     inset-block-start: 56px;
+    position: relative;
+    inset-inline-start: 0;
   }
 
   .header__theme-menu-item {
@@ -389,12 +346,12 @@
   }
 
   .header__text-block {
-    max-inline-size: 364px;
-    max-block-size: 117px;
-    inset-block-start: 28px;
+    position: relative;
+    margin-inline-start: 364px;
+    inset-block-end: 10px;
   }
 
-  .article__first-section {
+  .article__why-section {
     max-width: 472px;
     inset-inline-start: 13px;
   }
@@ -403,13 +360,13 @@
     max-inline-size: 236px;
   }
 
-  .article__second-section {
+  .article__what-section {
     grid-template-columns: none;
     gap: 0;
   }
 
-  .section-how {
-    gap: 19px;
+  .section__how {
+    gap: 20px;
   }
 
   .footer {
@@ -428,9 +385,9 @@
     padding: 10px;
   }
 
-  .header_rec {
+  .header__decor-rec {
     inset-block-start: 10px;
-    inset-inline-end: 32px;
+    inset-inline-end: 39px;
   }
 
   .header__theme-menu {
@@ -440,14 +397,9 @@
   }
 
   .header__theme-menu-list {
-    display: flex;
     flex-direction: column;
-    inset-inline-start: 0;
-    inset-block-start: 6px;
-  }
-
-  .header__theme-menu-item {
-    padding: 0;
+    inset-block-start: 5px;
+    inset-inline-start: -1px;
   }
 
   .decorated-zone::before {
@@ -463,15 +415,13 @@
   .header__title {
     font-size: 116px;
     inset-inline-start: 0px;
-    inset-block-start: 14px;
+    inset-block-start: 15px;
   }
 
   .header__text-block {
     position: relative;
-    inset-block-start: 23px;
-    justify-self: start;
-    max-inline-size: 355px;
-    max-block-size: 117px;
+    inset-block-end: 15px;
+    margin-inline-start: 0;
   }
 
   .main {
@@ -479,24 +429,15 @@
     gap: 50px;
   }
 
-  .section-why {
-    max-inline-size: 355px;
+  .section {
     grid-template-columns: none;
   }
 
-  .article__first-section {
+  .article__why-section {
     inset-inline-start: 0;
   }
 
-  .main__question-text {
-    max-inline-size: 355px;
-  }
-
-  .section-what {
-    max-inline-size: 355px;
-  }
-
-  .article__second-section {
+  .article__what-section {
     grid-template-columns: none;
     gap: 0;
   }
@@ -504,6 +445,10 @@
   .section-how {
     grid-template-columns: none;
     gap: 19px;
+  }
+
+  .article__how-section {
+    margin-block-start: 8px;
   }
 
   .article__picture-section {
